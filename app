@@ -16,9 +16,9 @@ def index():
         q=request.form.get("question")
         i={"prompt":q}
         r=version.predict(**i)
-        return (render_template("Cloudpicture.html", result=r[0]))
+        return (render_template("index.html", result=r[0]))
     else:
-        return (render_template("Cloudpicture.html", result="waiting"))
+        return (render_template("index.html", result="waiting"))
 
 
 if __name__ == "__main__":
